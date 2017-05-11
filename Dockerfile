@@ -17,3 +17,4 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
 
 ADD SimHei.tar.gz /usr/share/fonts
 ADD SimSun.tar.gz /usr/share/fonts
+ENV LANG C.UTF-8
