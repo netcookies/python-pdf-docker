@@ -12,7 +12,7 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
    && pip --no-cache-dir install weasyprint \
    && pip --no-cache-dir install PyPDF2 \
    && pip --no-cache-dir install matplotlib \
-   && rm -rf /var/cache/apk/*
+   && rm -rf /var/cache/apk/* \
    && mkdir -p /usr/share/fonts
 
 ADD SimHei.tar.gz /usr/share/fonts
