@@ -9,7 +9,9 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
    lcms2-dev libwebp-dev tcl-dev tk-dev openjpeg-dev cairo-dev pango-dev gdk-pixbuf-dev \
    && ln -s /usr/include/locale.h /usr/include/xlocale.h \
    && pip --no-cache-dir install bs4 \
-   && pip --no-cache-dir install weasyprint \
+   # use github version install of the pip one
+   #&& pip --no-cache-dir install weasyprint \
+   && pip --no-cache-dir install https://github.com/Kozea/WeasyPrint/archive/master.zip \
    && pip --no-cache-dir install PyPDF2 \
    && pip --no-cache-dir install matplotlib \
    && rm -rf /var/cache/apk/* \
