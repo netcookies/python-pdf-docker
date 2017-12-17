@@ -11,6 +11,8 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
    && pip --no-cache-dir install bs4 \
    # use github version install of the pip one
    #&& pip --no-cache-dir install weasyprint \
+   && pip --no-cache-dir install lxml\
+   && pip --no-cache-dir install packaging\
    && pip --no-cache-dir install https://github.com/Kozea/WeasyPrint/archive/master.zip \
    && pip --no-cache-dir install PyPDF2 \
    && pip --no-cache-dir install matplotlib \
@@ -19,4 +21,7 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
 
 ADD SimHei.tar.gz /usr/share/fonts
 ADD SimSun.tar.gz /usr/share/fonts
-ENV LANG C.UTF-8
+#ENV LANG C.UTF-8
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8 
