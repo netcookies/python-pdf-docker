@@ -1,6 +1,7 @@
 FROM python:alpine
 MAINTAINER Isulew <netcookies@gmail.com>
 
+ADD requirements.txt /
 RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
 && apk add --update \
 # ca-certificates gcc g++ curl openblas-dev@community
