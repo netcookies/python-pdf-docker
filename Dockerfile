@@ -8,14 +8,7 @@ RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /et
    alpine-sdk libffi-dev libxml2-dev libxslt-dev libjpeg-turbo-dev zlib-dev freetype-dev \
    lcms2-dev libwebp-dev tcl-dev tk-dev openjpeg-dev cairo-dev pango-dev gdk-pixbuf-dev \
    && ln -s /usr/include/locale.h /usr/include/xlocale.h \
-   && pip --no-cache-dir install bs4 \
-   # use github version install of the pip one
-   #&& pip --no-cache-dir install weasyprint \
-   && pip --no-cache-dir install lxml\
-   && pip --no-cache-dir install packaging\
-   && pip --no-cache-dir install https://github.com/Kozea/WeasyPrint/archive/master.zip \
-   && pip --no-cache-dir install PyPDF2 \
-   && pip --no-cache-dir install matplotlib \
+   && pip --no-cache-dir install -r requirements.txt \
    && rm -rf /var/cache/apk/* \
    && mkdir -p /usr/share/fonts
 
